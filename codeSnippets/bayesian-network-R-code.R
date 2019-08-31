@@ -1,0 +1,5 @@
+library(bnlearn)
+data(coronary)
+bn_df <- data.frame(coronary)
+res <- hc(bn_df)
+plot(res)

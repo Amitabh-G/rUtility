@@ -1,0 +1,16 @@
+library(rJava)
+library(RJDBC)
+library(dplyr)
+library(sqldf)
+install.packages('stringr')
+library(stringr)
+install.packages('anytime')
+library(anytime) 
+setwd("C:/Program Files/Java/ojdbc6.jar")
+# drv <- JDBC(driverClass = "oracle.jdbc.driver.OracleDriver", "C:/Program Files/Java/ojdbc6.jar", identifier.quote="`")
+
+drv <- JDBC(driverClass="com.mysql.jdbc.Driver", classPath="mysql-connector-java-5.1.23-bin.jar", identifier.quote="`")
+conn <- dbConnect(drv, "jdbc:oracle:thin:@//presalndb.chqjhxzwdny7.ap-southeast-1.rds.amazonaws.com/PRESNDB", "SMARTCUBES_7601", "SMARTCUBES_7601") 
+options(java.parameters = "-Xmx8000m")
+getwd()
+
