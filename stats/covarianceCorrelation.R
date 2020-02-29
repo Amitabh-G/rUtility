@@ -1,0 +1,11 @@
+a <- c(0,1,2)
+b <- c(3,4,5)
+cor(a,b)
+a <- c(0,1,2,3)
+b <- c(2,3,4,5)
+cor(a,b)
+cov(a,b)
+corrab <- cov(a,b)/(sd(a)*sd(b))
+corrab
+sd(a)
+sd(b)
